@@ -36,6 +36,8 @@
 
 #include "iodev/iodev.h"
 
+#include "bx_debug/debug.h"
+
 extern VMCS_Mapping vmcs_map;
 
 #if BX_SUPPORT_VMX >= 2
@@ -135,6 +137,8 @@ static const char *VMX_vmexit_reason_name[] =
   /* 77 */  "TDCALL",
   /* 78 */  "RDMSRLIST",
   /* 79 */  "WRMSRLIST",
+  /* 80 */  "URDMSR",
+  /* 81 */  "UWRMSR",
 };
 
 #include "decoder/ia_opcodes.h"
